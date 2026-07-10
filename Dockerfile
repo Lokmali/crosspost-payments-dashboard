@@ -26,8 +26,8 @@ ENV HOST=0.0.0.0
 # Defaults to "production" if unset.
 EXPOSE 3000
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
-  CMD curl -f http://localhost:3000/health || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=5 \
+  CMD curl -f "http://127.0.0.1:${PORT:-3000}/" || exit 1
 
 USER appuser
 CMD ["sh", "-c", "node_modules/.bin/bos start --no-interactive"]
