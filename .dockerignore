@@ -1,0 +1,15 @@
+.git
+.github
+.bos/logs
+.bos/generated
+.env
+.env.*
+!.env.example
+node_modules
+api/dist
+ui/dist
+dist
+coverage
+*.log
+*.tsbuildinfo
+.DS_Store
