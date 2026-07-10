@@ -16,8 +16,7 @@ COPY --chown=appuser:appgroup . .
 RUN bun run postinstall
 
 RUN mkdir -p .bos/generated .bos/logs && \
-    chown -R appuser:appgroup .bos && \
-    chown appuser:appgroup /app
+    chown -R appuser:appgroup /app
 
 ENV NODE_ENV=production
 ENV PORT=3000
